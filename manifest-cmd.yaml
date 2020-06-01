@@ -1,0 +1,35 @@
+version: '1.5'
+appVersion: latest
+type: install
+id: pgadmin4
+name: pgadmin4
+baseUrl: https://raw.githubusercontent.com/vlobzakov/pgadmin/master
+logo: /images/pgadmin-small.png
+homepage: https://www.pgadmin.org/
+
+categories:
+- apps/dev-and-admin-tools
+
+description:
+  text: /texts/description.md
+  short: pgAdmin is a top management tool for PostgreSQL here utilized as web application.
+
+globals:
+  email: ${user.email}
+  password: ${fn.password(10)}
+
+mixins:
+  https://raw.githubusercontent.com/vlobzakov/pgadmin/master/scripts/mixin1.yaml
+
+nodes:
+- cloudlets: 12
+  nodeType: apache
+
+onInstall:
+  - pgadmin4install
+  - restartNodes:
+    - nodeGroup: [cp]
+
+startPage: http://${env.domain}/pgadmin4
+
+success: /texts/success-cmd.md
