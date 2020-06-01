@@ -38,11 +38,11 @@ Once the deployment is finished, you’ll see an appropriate success pop-up.
 <img src="images/success.png" width="429">
 </p>
 
- The application is ready to use just press **Open in Browser** button and proceed to admin panel. Use provided credentials creating meetings.
+ The application is ready to use just press **Open in Browser** button and proceed to admin panel. Use provided credentials to access it.
 
-## Traffic Encryption with SSL Cerificate
+## Traffic Encryption
 
-For production mode, the installation will require a traffic encryption that can be ensured with the [Buil-In SSL](https://docs.jelastic.com/built-in-ssl) certificate issued for certified load balancer which becomes an entry point of your environment. To do this add load balancer(e.g NGINX) to your environment and enable SSL.
+For production mode, the installation will require a traffic encryption that can be ensured with the [Built-In SSL](https://docs.jelastic.com/built-in-ssl) certificate issued for certified load balancer which becomes an entry point of your environment. To do this add load balancer(e.g NGINX) to your environment and enable SSL.
 
 <p align="left"> 
 <img src="images/add-lb-ssl.png" width="650">
