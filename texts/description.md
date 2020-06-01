@@ -1,0 +1,1 @@
+pgAdmin is a management tool for PostgreSQL and derivative relational databases such as EnterpriseDB's EDB Advanced Server. It may be run either as a web or desktop application. For more information on the features offered, please see the Features and Screenshots pages.

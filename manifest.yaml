@@ -1,0 +1,29 @@
+appVersion: latest
+type: install
+id: pgadmin4
+name: pgAdmin4
+baseUrl: https://raw.githubusercontent.com/vlobzakov/pgadmin/master
+logo: /images/pgadmin-small.png
+homepage: https://https://www.pgadmin.org/
+
+categories:
+- apps/dev-and-admin-tools
+
+globals:
+  email: ${user.email}
+  password: ${fn.password(10)}
+  
+description:
+  text: /texts/description.md
+  short: pgAdmin is a top management tool for PostgreSQL here utilized as web application.
+
+nodes:
+- cloudlets: 16
+  nodeGroup: cp
+  image: dpage/pgadmin4:latest
+  env:
+    PGADMIN_DEFAULT_EMAIL: ${globals.email}
+    PGADMIN_DEFAULT_PASSWORD: ${globals.password}
+    PGADMIN_LISTEN_PORT: 8080
+
+success: /texts/success-docker.md
