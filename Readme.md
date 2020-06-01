@@ -35,15 +35,15 @@ and click on __Install__.
 Once the deployment is finished, you’ll see an appropriate success pop-up.
 
 <p align="left"> 
-<img src="images/success.png" width="430">
+<img src="images/success.png" width="429">
 </p>
 
  The application is ready to use just press **Open in Browser** button and proceed to admin panel. Use provided credentials creating meetings.
 
 ## Traffic Encryption with SSL Cerificate
 
-For production mode, the installation will require a traffic encryption that can be ensured with the SSL certificate issued for certified load balancer which becomes an entry point of your environment. To do this add a load balancer(e.g NGINX) to your environment and enable SSL.
+For production mode, the installation will require a traffic encryption that can be ensured with the [Buil-In SSL](https://docs.jelastic.com/built-in-ssl) certificate issued for certified load balancer which becomes an entry point of your environment. To do this add load balancer(e.g NGINX) to your environment and enable SSL.
 
 <p align="left"> 
-<img src="images/add-lb-ssl.png" width="430">
+<img src="images/add-lb-ssl.png" width="650">
 </p>
