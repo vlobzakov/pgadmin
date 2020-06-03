@@ -33,5 +33,4 @@ onInstall:
   - restartContainer:
       nodeGroup: cp
 
-
-success: /texts/success-docker.md
+success: /texts/success.md
