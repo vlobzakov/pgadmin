@@ -18,12 +18,20 @@ description:
   short: pgAdmin is a top management tool for PostgreSQL here utilized as web application.
 
 nodes:
-- cloudlets: 16
-  nodeGroup: cp
-  image: dpage/pgadmin4:latest
-  env:
-    PGADMIN_DEFAULT_EMAIL: ${globals.email}
-    PGADMIN_DEFAULT_PASSWORD: ${globals.password}
-    PGADMIN_LISTEN_PORT: 8080
+  - cloudlets: 16
+    nodeGroup: cp
+    image: dpage/pgadmin4:latest
+    env:
+      PGADMIN_DEFAULT_EMAIL: ${globals.email}
+      PGADMIN_DEFAULT_PASSWORD: ${globals.password}
+      PGADMIN_LISTEN_PORT: 8080
+    
+onInstall:
+  - cmd[cp]: 
+      mkdir /home/pgadmin; 
+      chown pgadmin:pgadmin -R /home/pgadmin;
+  - restartContainer:
+      nodeGroup: cp
+
 
 success: /texts/success-docker.md
